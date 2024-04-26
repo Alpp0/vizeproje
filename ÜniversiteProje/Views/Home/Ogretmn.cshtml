@@ -1,0 +1,32 @@
+﻿@using ÜniversiteProje.Models.Entity;
+@model List<Ogretmn>
+@{
+    ViewBag.Title = "Ogretmn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Öğretmen Adı</th>
+        <th>Öğretmen Soyadı</th>
+        <th>Bölümü</th>
+    </tr>
+    <tbody>
+        @foreach (var ogr in Model)
+        {
+            <tr>
+                <td>@ogr.id</td>
+                <td>@ogr.Ad</td>
+                <td>@ogr.Soyad</td>
+                <td>
+                    <a href="~/Home/Delete/@ogr.id" class="btn btn-danger">Sil</a>
+                    <a href="~/Home/OgrenciGetir/@ogr.id" class="btn btn-success">Guncelle</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a href="~/Home/Contact" class="btn btn-primary">Yeni Öğretmen Kaydı</a>
+

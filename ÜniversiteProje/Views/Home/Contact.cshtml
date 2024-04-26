@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Öğretmen Ekle";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="ad">Adı:</label>
+        <input type="text" name="ad" id="ad" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="soyad">Soyadı:</label>
+        <input type="text" name="soyad" id="soyad" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="bolum">Bölüm:</label>
+        <input type="text" name="bolum" id="bolum" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Öğretmen Ekle</button>
+}
